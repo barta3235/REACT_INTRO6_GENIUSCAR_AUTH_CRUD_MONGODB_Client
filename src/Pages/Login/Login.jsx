@@ -20,7 +20,7 @@ const Login = () => {
         signIn(email,password)
         .then(result=>{
             console.log(result.user)
-            Swal.fire("SweetAlert2 is working!");
+            Swal.fire("You have logged in");
         })
         .catch(error=>{
             console.log(error.message)

@@ -1,7 +1,23 @@
 import { Link } from "react-router-dom";
 import logo from '../../../assets/assets/icons/logo.svg'
+import { useContext } from "react";
+import { AuthContext } from "../../../providers/AuthProviders";
+import Swal from "sweetalert2";
 
 const Navbar = () => {
+    const {user,logOut}=useContext(AuthContext);
+
+     const handleLogOut=(e)=>{
+        e.preventDefault()
+        
+        logOut()
+        .then(result=>{
+            console.log('logOut:',result.user);
+        })
+        .catch(error=>{
+            console.log(error.message)
+        })
+     }
 
     const navitems = <>
         <li><Link to='/' className="text-2xl font-semibold">Home</Link></li>
@@ -35,7 +51,10 @@ const Navbar = () => {
                     {navitems}
                 </ul>
             </div>
-            <div className="navbar-end">
+            <div className="navbar-end flex gap-5">
+                {
+                    user ? <button onClick={handleLogOut} className="btn btn-outline btn-warning">Log Out</button> : ''
+                }
                 <button className="btn btn-outline btn-warning">Appointment</button>
             </div>
         </div>

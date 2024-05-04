@@ -20,7 +20,7 @@ const SignUp = () => {
         createUser(email,password)
         .then((result)=>{
             console.log(result?.user);
-            Swal.fire("SweetAlert2 is working!");
+            Swal.fire("You have signed in");
         })
         .catch((error)=>{
             console.log(error.message);
