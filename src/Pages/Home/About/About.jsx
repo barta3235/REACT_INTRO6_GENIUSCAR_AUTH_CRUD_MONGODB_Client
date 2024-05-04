@@ -12,8 +12,8 @@ const About = () => {
                 <div className='lg:w-1/2 space-y-7 md:p-4'>
                     <h3 className='text-3xl text-orange-600 font-extrabold'>About Us</h3>
                     <h1 className="text-5xl font-bold">We are qualified & of experience in this field</h1>
-                    <p className="">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-                    <p className="">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+                    <p className="font-medium text-[19px]">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+                    <p className="font-medium text-[19px]">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
                     <button className="btn btn-warning bg-orange-600 text-white font-extrabold">Ger More Info</button>
                 </div>
             </div>
