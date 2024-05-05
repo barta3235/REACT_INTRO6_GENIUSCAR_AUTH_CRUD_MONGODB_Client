@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 
-const BookingRow = ({ booking,handleDelete }) => {
+const BookingRow = ({ booking,handleDelete,handleConfirm }) => {
 
-    const { _id,customerName, Price, Date, img, ServiceTitle } = booking
+    const { _id,customerName, Price, Date, img, ServiceTitle,Status } = booking
 
-
+    console.log('Status check:',Status)
     return (
         <tr>
             <th>
@@ -34,7 +34,9 @@ const BookingRow = ({ booking,handleDelete }) => {
                 {ServiceTitle}
             </td>
             <th>
-                <button className="btn btn-ghost btn-xs bg-orange-600 text-white">pending</button>
+                {
+                    Status==='confirm' ? 'Shipped' : <button onClick={()=>handleConfirm(_id)} className="btn btn-ghost btn-xs bg-orange-600 text-white">pending</button>
+                }
             </th>
         </tr>
     );
