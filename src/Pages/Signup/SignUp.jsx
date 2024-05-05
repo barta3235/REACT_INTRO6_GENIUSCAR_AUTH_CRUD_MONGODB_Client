@@ -20,7 +20,7 @@ const SignUp = () => {
         createUser(email,password)
         .then((result)=>{
             console.log(result?.user);
-            Swal.fire("You have signed in");
+            Swal.fire("You have resgistered");
         })
         .catch((error)=>{
             console.log(error.message);

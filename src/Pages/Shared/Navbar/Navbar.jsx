@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import logo from '../../../assets/assets/icons/logo.svg'
 import { useContext } from "react";
 import { AuthContext } from "../../../providers/AuthProviders";
-import Swal from "sweetalert2";
+
 
 const Navbar = () => {
     const {user,logOut}=useContext(AuthContext);
@@ -22,6 +22,12 @@ const Navbar = () => {
     const navitems = <>
         <li><Link to='/' className="text-2xl font-semibold">Home</Link></li>
         <li><Link to='/about' className="text-2xl font-semibold">About</Link></li>
+        {
+            user ? '' :  <li><Link to='/login' className="text-2xl font-semibold">Login</Link></li>
+        }
+        {
+            user ? <li><Link to='/bookings' className="text-2xl font-semibold">My Bookings</Link></li> : ''
+        }
     </>
 
 
