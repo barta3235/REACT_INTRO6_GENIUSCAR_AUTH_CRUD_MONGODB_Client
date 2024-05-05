@@ -34,6 +34,9 @@ const Navbar = () => {
                     </div>
                     <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
                         {navitems}
+                        {
+                            user ? <li><button onClick={handleLogOut} to='/about' className="text-2xl font-semibold">LogOut</button></li> : ''
+                        }
                     </ul>
                 </div>
                 <div className="">
@@ -52,9 +55,9 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end flex gap-5">
-                {
-                    user ? <button onClick={handleLogOut} className="btn btn-outline btn-warning">Log Out</button> : ''
-                }
+              {
+                user ? <button onClick={handleLogOut} className="btn btn-outline btn-warning hidden md:flex">Log Out</button> : ''
+              }
                 <button className="btn btn-outline btn-warning">Appointment</button>
             </div>
         </div>
