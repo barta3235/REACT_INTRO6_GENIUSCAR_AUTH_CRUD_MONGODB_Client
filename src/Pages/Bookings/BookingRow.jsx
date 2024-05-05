@@ -1,13 +1,9 @@
 import { Link } from "react-router-dom";
 
-const BookingRow = ({ booking }) => {
+const BookingRow = ({ booking,handleDelete }) => {
 
     const { _id,customerName, Price, Date, img, ServiceTitle } = booking
 
-    const handleDelete=(id)=>{
-        console.log(id)
-
-    }
 
     return (
         <tr>
